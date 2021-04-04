@@ -16,14 +16,17 @@ const Main = styled.main``;
 const Home = () => {
   return (
     <Layout>
-      <Helmet title="Real Value" />
+      <Helmet
+        title="Buy your dream property in greater faridabad | Real Value"
+        description="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."
+      />
       <Header />
       <Main>
         <Banner />
-        <Services />
-        <Team />
-        <Reviews />
         <Contact />
+        <Services />
+        <Reviews />
+        <Team />
       </Main>
       <Footer />
     </Layout>

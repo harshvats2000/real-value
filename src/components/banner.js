@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled, { css } from "styled-components";
+import { contact_number } from "../constants";
 
 const Container = styled.div`
   position: relative;
@@ -18,7 +19,7 @@ const Body = styled.div`
   position: absolute;
 `;
 const BodyWrapper = styled.div`
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 0.4);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -45,6 +46,10 @@ const Button = styled.button`
     border: 2px solid ${props.theme.primary};
     color: ${props.theme.primary};
   `};
+  & > a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const Banner = () => {
@@ -63,8 +68,10 @@ const Banner = () => {
           <Heading>
             Dream Homes in <span> Faridabad</span>
           </Heading>
-          <Para>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Para>
-          <Button>Call Now</Button>
+          <Para>Buy best property like builder floors, flats, villas in Faridabad at affordable rates.</Para>
+          <Button>
+            <a href={`tel:${contact_number}`}>call now</a>
+          </Button>
         </BodyWrapper>
       </Body>
     </Container>

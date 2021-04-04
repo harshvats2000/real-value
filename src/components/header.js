@@ -9,9 +9,14 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  height: 48px;
 `;
 
-const Logo = styled.p``;
+const Logo = styled.p`
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+`;
 
 const Nav = styled.ul`
   display: flex;
@@ -28,6 +33,7 @@ const MobileNav = styled.ul`
   transition: 0.5s;
   margin: 0;
   padding: 0;
+  display: none;
   @media (min-width: 700px) {
     display: none;
   }
@@ -49,8 +55,8 @@ const NavItem = styled.li`
 
 const MenuIcon = styled.div`
   display: none;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   flex-direction: column;
   justify-content: space-around;
   @media (max-width: 700px) {
@@ -67,20 +73,20 @@ const MenuIcon = styled.div`
 
 const Links = [
   {
-    label: "about",
-    url: "about"
+    label: "about us",
+    url: "#about"
   },
   {
     label: "services",
-    url: "services"
+    url: "#services"
   },
   {
-    label: "teams",
-    url: "teams"
+    label: "Our Team",
+    url: "#team"
   },
   {
-    label: "contact",
-    url: "contact"
+    label: "contact us",
+    url: "#contact"
   }
 ];
 
@@ -88,7 +94,9 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    document.querySelector("#header-nav-mobile").style.height = openMenu ? "130px" : "0";
+    const el = document.querySelector("#header-nav-mobile");
+    el.style.display = "flex";
+    el.style.height = openMenu ? "136px" : "0";
   }, [openMenu]);
 
   return (
@@ -104,7 +112,7 @@ const Header = () => {
           <Nav>
             {Links.map((link, i) => (
               <NavItem key={i}>
-                <Link to={`/${link.url}`}>{link.label}</Link>
+                <Link to={`${link.url}`}>{link.label}</Link>
               </NavItem>
             ))}
           </Nav>
@@ -112,7 +120,7 @@ const Header = () => {
         <MobileNav id="header-nav-mobile">
           {Links.map((link, i) => (
             <NavItem key={i}>
-              <Link to={`/${link.url}`}>{link.label}</Link>
+              <Link to={`${link.url}`}>{link.label}</Link>
             </NavItem>
           ))}
         </MobileNav>
