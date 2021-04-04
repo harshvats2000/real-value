@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { contact_email } from "../constants";
 
 const Section = styled.section`
   width: 300px;
@@ -53,14 +54,14 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = () => {
-    console.log("submitted");
-  };
   return (
     <Section data-aos="fade-up">
       <SectionHeading id="contact">Request A Call Back</SectionHeading>
       <FormWrapper>
-        <Form action="https://formsubmit.co/info@digivats.com" method="POST" onSubmit={handleSubmit}>
+        <Form action={`https://formsubmit.co/${contact_email}`} method="POST">
+          <input type="hidden" name="_cc" value="info@digivats.com" />
+          <input type="hidden" name="_subject" value="Message from your website."></input>
+          <input type="hidden" name="_template" value="table"></input>
           <Input type="text" name="name" placeholder="Your full name..." value={data.name} onChange={onChange} required />
           <br />
           <Input type="tel" name="number" placeholder="Your contact number..." value={data.number} onChange={onChange} required />

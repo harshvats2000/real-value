@@ -30,6 +30,7 @@ const Name = styled.h3`
   font-size: 20px;
   margin-bottom: 0;
 `;
+const Number = styled.p``;
 
 const Team = () => {
   return (
@@ -44,6 +45,7 @@ const Team = () => {
 
           <Body>
             <Name>Girish Kakkar</Name>
+            <Number>9810445809</Number>
           </Body>
         </ListItem>
 
@@ -53,7 +55,8 @@ const Team = () => {
           </ImageWrapper>
 
           <Body>
-            <Name>Vishal Bharadwaj</Name>
+            <Name>Vishal Vashistha</Name>
+            <Number>9654324427</Number>
           </Body>
         </ListItem>
 
@@ -64,6 +67,7 @@ const Team = () => {
 
           <Body>
             <Name>Nitin Garg</Name>
+            <Number>9811154523</Number>
           </Body>
         </ListItem>
       </List>

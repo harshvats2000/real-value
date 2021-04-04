@@ -53,6 +53,14 @@ const Button = styled.button`
 `;
 
 const Banner = () => {
+  const sendMail = (e) => {
+    fetch("./netlify/functions/send-email", {
+      method: "POST"
+    })
+      .then((res) => console.log(res))
+      .catch((e) => console.log(e));
+  };
+
   return (
     <Container>
       <ImageWrapper>
@@ -69,7 +77,7 @@ const Banner = () => {
             Dream Homes in <span> Faridabad</span>
           </Heading>
           <Para>Buy best property like builder floors, flats, villas in Faridabad at affordable rates.</Para>
-          <Button>
+          <Button onClick={sendMail}>
             <a href={`tel:${contact_number}`}>call now</a>
           </Button>
         </BodyWrapper>

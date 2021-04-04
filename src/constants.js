@@ -1,5 +1,6 @@
 export const contact_number = 1234567890;
 export const contact_email = "realvalueproperties123@gmail.com";
+// export const contact_email = "info@digivats.com";
 export const Links = [
   {
     label: "about us",

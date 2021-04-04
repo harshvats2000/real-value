@@ -85,7 +85,7 @@ const Reviews = () => {
         <SectionHeading>What customers say about Real Value?</SectionHeading>
         <List>
           {reviews.map((review, i) => (
-            <ListItem data-aos="fade-in" item={i + 1}>
+            <ListItem key={i} data-aos="fade-in" item={i + 1}>
               <Stars>
                 {[1, 2, 3, 4, 5].map((i) => (
                   <StaticImage src="../images/star.svg" alt="star" layout="fixed" placeholder="tracedSVG" width={30} height={30} />
