@@ -1,11 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled, { css } from "styled-components";
-import { contact_number } from "../constants";
+import { contact_number, contact_email } from "../constants";
 
 const Container = styled.div`
   position: relative;
-  min-height: 350px;
+  min-height: 400px;
 `;
 const ImageWrapper = styled.div`
   width: 100vw;
@@ -54,8 +54,17 @@ const Button = styled.button`
 
 const Banner = () => {
   const sendMail = (e) => {
-    fetch("./netlify/functions/send-email", {
-      method: "POST"
+    fetch("https://real-value-sendmail-api.herokuapp.com/api/sendmail", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        subject: "Someone Clicked on call now button on real value website.",
+        text: "Someone clicked on call now button on real value website.",
+        toEmails: [contact_email]
+      })
     })
       .then((res) => console.log(res))
       .catch((e) => console.log(e));
@@ -76,7 +85,7 @@ const Banner = () => {
           <Heading>
             Dream Homes in <span> Faridabad</span>
           </Heading>
-          <Para>Buy best property like builder floors, flats, villas in Faridabad at affordable rates.</Para>
+          <Para>Buy best property like builder floors, flats, villas in Faridabad.</Para>
           <Button onClick={sendMail}>
             <a href={`tel:${contact_number}`}>call now</a>
           </Button>

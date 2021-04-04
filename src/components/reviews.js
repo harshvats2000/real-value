@@ -76,7 +76,9 @@ const Stars = styled.div`
 const Name = styled.div`
   text-transform: capitalize;
 `;
-const Text = styled.p``;
+const Text = styled.p`
+  line-height: 24px;
+`;
 
 const Reviews = () => {
   return (

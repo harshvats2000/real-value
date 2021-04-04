@@ -32,6 +32,7 @@ const Heading = styled.h3`
 const Para = styled.p`
   margin: 0 0 10px 0;
   color: rgb(0, 0, 0, 0.7);
+  line-height: 24px;
 `;
 
 const Services = () => {
@@ -63,6 +64,19 @@ const Services = () => {
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Flats in Faridabad</Heading>
+          <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+        </ListItem>
+
+        <ListItem data-aos="fade-up">
+          <ImageWrapper>
+            <StaticImage
+              src="https://images.unsplash.com/photo-1549479732-ee0adb0f5d32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
+              alt="Villas"
+              placeholder="blurred"
+            />
+          </ImageWrapper>
+          <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
+          <Heading>Villas/Plots and commercial Shops/SCO'S</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
         </ListItem>
       </List>

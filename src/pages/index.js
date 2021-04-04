@@ -9,6 +9,7 @@ import Contact from "../components/contact";
 import Reviews from "../components/reviews";
 import Layout from "../Layout";
 import Banner from "../components/banner";
+import About from "../components/about";
 
 const Main = styled.main``;
 
@@ -26,6 +27,7 @@ const Home = () => {
         <Contact />
         <Services />
         <Reviews />
+        <About />
         <Team />
       </Main>
       <Footer />

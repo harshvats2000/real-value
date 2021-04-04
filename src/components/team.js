@@ -35,7 +35,7 @@ const Number = styled.p``;
 const Team = () => {
   return (
     <Section>
-      <SectionHeading id="team">Our Team</SectionHeading>
+      <SectionHeading id="team">Team Behind Real Value</SectionHeading>
 
       <List>
         <ListItem>
