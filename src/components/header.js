@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { Links } from "../constants";
 
 const Container = styled.header``;
 
@@ -70,25 +71,6 @@ const MenuIcon = styled.div`
     border-radius: 15px;
   }
 `;
-
-const Links = [
-  {
-    label: "about us",
-    url: "#about"
-  },
-  {
-    label: "services",
-    url: "#services"
-  },
-  {
-    label: "Our Team",
-    url: "#team"
-  },
-  {
-    label: "contact us",
-    url: "#contact"
-  }
-];
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);

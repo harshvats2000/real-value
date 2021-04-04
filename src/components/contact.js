@@ -6,7 +6,7 @@ const Section = styled.section`
   margin: -10px auto 0 auto;
   position: relative;
   border-radius: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   background: white;
 `;
 const FormWrapper = styled.div``;
@@ -19,8 +19,8 @@ const Form = styled.form`
   text-align: center;
 `;
 const Input = styled.input`
-  padding: 8px;
-  margin: 8px 0;
+  padding: 12px 8px;
+  margin: 12px 0;
   width: 100%;
   transition: 0.5s;
   border: 2px solid gainsboro;

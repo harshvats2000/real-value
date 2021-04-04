@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { FaBeer } from "react-icons/fa";
+import { FaLocationArrow, FaPhone, FaMailBulk } from "react-icons/fa";
 import { Link } from "gatsby";
-import { contact_number, contact_email } from "../constants";
+import { contact_number, contact_email, Links } from "../constants";
 
 const FooterWrapper = styled.footer`
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
   display: flex;
-  background: gainsboro;
+  @media (min-width: 750px) {
+    align-items: center;
+  }
+  color: rgb(256, 256, 256, 0.8);
+  a {
+    color: rgb(256, 256, 256, 0.8);
+  }
   padding: 10px;
   & > div {
     flex: 1;
@@ -23,13 +31,18 @@ const FooterWrapper = styled.footer`
 const FooterLeft = styled.div`
   margin-left: 0 !important;
 `;
-const FooterCenter = styled.div``;
+const FooterCenter = styled.div`
+  svg {
+    margin-right: 8px;
+  }
+`;
 const FooterRight = styled.div`
   margin-right: 0 !important;
 `;
 const Address = styled.div`
   display: flex;
   align-items: center;
+  padding: 8px 0;
 `;
 const Number = styled.div`
   align-items: center;
@@ -40,35 +53,32 @@ const Email = styled.div`
   display: flex;
 `;
 const FooterLinks = styled.div`
+  margin-bottom: 15px;
   & > a {
     margin: 0 4px;
+    text-transform: capitalize;
   }
 `;
-const SocialLinks = styled.div`
-  & > a {
-    margin: 0 4px;
-  }
-`;
+// const SocialLinks = styled.div`
+//   & > a {
+//     margin: 0 4px;
+//   }
+// `;
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <FooterLeft>
-        <h3>Real Value</h3>
-
-        <FooterLinks>
-          <Link>About</Link>
-          <Link>Services</Link>
-          <Link>Team</Link>
-          <Link>Contact</Link>
-        </FooterLinks>
-
-        <p className="footer-company-name">Real Value © {new Date().getFullYear()}</p>
+        <h3>Real Value © {new Date().getFullYear()}</h3>
+        <p>
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
       </FooterLeft>
 
       <FooterCenter>
         <Address>
-          <FaBeer />
+          <FaLocationArrow />
           <address>
             Plot no. 1, opposite- Ozone park,
             <br />
@@ -79,14 +89,14 @@ const Footer = () => {
         </Address>
 
         <Number>
-          <FaBeer />
+          <FaPhone />
           <p>
             <a href={`tel:${contact_number}`}>{contact_number}</a>
           </p>
         </Number>
 
         <Email>
-          <FaBeer />
+          <FaMailBulk />
           <p>
             <a href={`mailto:${contact_email}`}>{contact_email}</a>
           </p>
@@ -94,12 +104,15 @@ const Footer = () => {
       </FooterCenter>
 
       <FooterRight>
-        <p className="footer-company-about">
-          <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-        </p>
+        <FooterLinks>
+          {Links.map((link, i) => (
+            <Link key={i} to={`${link.url}`}>
+              {link.label}
+            </Link>
+          ))}
+        </FooterLinks>
 
-        <SocialLinks>
+        {/* <SocialLinks>
           <Link>
             <FaBeer />
           </Link>
@@ -112,7 +125,7 @@ const Footer = () => {
           <Link>
             <FaBeer />
           </Link>
-        </SocialLinks>
+        </SocialLinks> */}
       </FooterRight>
     </FooterWrapper>
   );
