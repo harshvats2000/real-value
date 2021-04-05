@@ -9,15 +9,26 @@ const Section = styled.section`
   border-radius: 20px;
   padding-top: 20px;
   background: white;
+  @media (min-width: 750px) {
+    width: 800px;
+    padding: 30px 0;
+  }
 `;
 const FormWrapper = styled.div``;
 const SectionHeading = styled.h2`
   text-align: center;
   font-size: 30px;
   margin-top: 0;
+  @media (min-width: 750px) {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
 `;
 const Form = styled.form`
   text-align: center;
+  @media (min-width: 750px) {
+    display: flex;
+  }
 `;
 const Input = styled.input`
   padding: 12px 8px;
@@ -29,6 +40,10 @@ const Input = styled.input`
     border: 2px solid black;
     outline: none;
   }
+  @media (min-width: 750px) {
+    margin: 0 10px;
+    padding: 15px 10px;
+  }
 `;
 const Button = styled.input`
   width: 100%;
@@ -37,9 +52,18 @@ const Button = styled.input`
   font-size: 16px;
   background: black;
   color: white;
-  border: none;
+  border: 2px solid black;
+  cursor: pointer;
   padding: 10px;
   margin: 8px 0;
+  @media (min-width: 750px) {
+    transition: 0.5s;
+    margin: 0;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
 `;
 
 const Contact = () => {
@@ -55,7 +79,7 @@ const Contact = () => {
   };
 
   return (
-    <Section data-aos="fade-up">
+    <Section>
       <SectionHeading id="contact">Request A Call Back</SectionHeading>
       <FormWrapper>
         <Form action={`https://formsubmit.co/${contact_email}`} method="POST">

@@ -6,15 +6,24 @@ import { contact_number, contact_email } from "../constants";
 const Container = styled.div`
   position: relative;
   min-height: 400px;
+  width: 100vw;
+  @media (min-width: 750px) {
+    min-height: 500px;
+  }
 `;
 const ImageWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  div {
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
 `;
 const Body = styled.div`
+  width: 100%;
   height: 100%;
   position: absolute;
 `;
@@ -25,30 +34,48 @@ const BodyWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 10px;
+  @media (min-width: 750px) {
+    padding: 0 30px;
+  }
 `;
 const Heading = styled.h1`
   color: white;
   margin-bottom: 10px;
+  @media (min-width: 750px) {
+    font-size: 50px;
+  }
 `;
 const Para = styled.p`
   color: white;
   margin: 0 0 15px 0;
+  @media (min-width: 750px) {
+    font-size: 18px;
+  }
 `;
 const Button = styled.button`
-  width: 150px;
-  padding: 10px;
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
   background: transparent;
   text-transform: uppercase;
   backdrop-filter: blur(5px);
-  ${(props) => css`
-    border: 2px solid ${props.theme.primary};
-    color: ${props.theme.primary};
-  `};
+  width: 150px;
+  border: none;
   & > a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    ${(props) => css`
+      border: 2px solid ${props.theme.primary};
+      color: ${props.theme.primary};
+    `};
+    @media (min-width: 750px) {
+      padding: 15px;
+      width: 220px;
+    }
   }
 `;
 
@@ -82,9 +109,7 @@ const Banner = () => {
       </ImageWrapper>
       <Body>
         <BodyWrapper>
-          <Heading>
-            Dream Homes in <span> Faridabad</span>
-          </Heading>
+          <Heading>Dream Homes in Faridabad</Heading>
           <Para>Buy best property like builder floors, flats, villas in Faridabad.</Para>
           <Button onClick={sendMail}>
             <a href={`tel:${contact_number}`}>call now</a>

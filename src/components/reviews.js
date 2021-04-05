@@ -22,11 +22,15 @@ const reviews = [
 
 const Section = styled.section`
   padding: 20px 0;
+  margin: auto;
 `;
 const SectionHeading = styled.h2`
   text-align: center;
   font-size: 30px;
   margin-top: 0;
+  @media (min-width: 750px) {
+    font-size: 40px;
+  }
 `;
 
 const List = styled.div`
@@ -39,7 +43,7 @@ const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 15px 10px;
   margin: 0 10px;
   border-radius: 8px;
   background: gainsboro;
@@ -90,7 +94,7 @@ const Reviews = () => {
             <ListItem key={i} data-aos="fade-in" item={i + 1}>
               <Stars>
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <StaticImage src="../images/star.svg" alt="star" layout="fixed" placeholder="tracedSVG" width={30} height={30} />
+                  <StaticImage key={i} src="../images/star.svg" alt="star" layout="fixed" placeholder="blurred" width={30} height={30} />
                 ))}
               </Stars>
               <Text>{review.text}</Text>

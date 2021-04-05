@@ -16,6 +16,10 @@ const List = styled.ul`
   margin: auto;
   display: flex;
   overflow-x: scroll;
+  @media (min-width: 750px) {
+    max-width: 820px;
+    margin: auto;
+  }
 `;
 const ListItem = styled.li`
   padding: 10px;

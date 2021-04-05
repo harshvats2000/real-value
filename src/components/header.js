@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Links } from "../constants";
 
 const Container = styled.header``;
@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 10px;
   height: 48px;
+  @media (min-width: 750px) {
+    height: 70px;
+    padding: 0 30px;
+  }
 `;
 
 const Logo = styled.p`
@@ -22,7 +26,10 @@ const Logo = styled.p`
 const Nav = styled.ul`
   display: flex;
   list-style: none;
-  @media (max-width: 700px) {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  @media (max-width: 750px) {
     display: none;
     flex-direction: column;
   }
@@ -35,22 +42,29 @@ const MobileNav = styled.ul`
   margin: 0;
   padding: 0;
   display: none;
-  @media (min-width: 700px) {
+  @media (min-width: 750px) {
     display: none;
   }
 `;
 
 const NavItem = styled.li`
-  margin: 0 5px;
-  padding: 3px;
-  @media (max-width: 700px) {
-    padding: 5px 0;
-    margin: 0 10px;
-  }
+  margin: 0 10px;
   & > a {
+    padding: 3px;
+    height: 100%;
+    display: flex;
+    align-items: center;
     color: black;
     text-decoration: none;
     text-transform: capitalize;
+    transition: 0.3s;
+    border-bottom: 3px solid white;
+    @media (max-width: 750px) {
+      padding: 5px;
+    }
+    &:hover {
+      border-bottom: 3px solid black;
+    }
   }
 `;
 
@@ -60,7 +74,7 @@ const MenuIcon = styled.div`
   height: 27px;
   flex-direction: column;
   justify-content: space-around;
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     display: flex;
   }
   & > span {

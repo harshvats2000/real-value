@@ -8,17 +8,34 @@ const Section = styled.section`
 const SectionHeading = styled.h2`
   text-align: center;
   font-size: 30px;
+  @media (min-width: 750px) {
+    font-size: 40px;
+  }
 `;
 const List = styled.ul`
   list-style: none;
   padding: 0;
+  @media (min-width: 750px) {
+    display: flex;
+  }
 `;
 const ListItem = styled.li`
   padding: 10px;
+  flex: 1;
+  border-radius: 10px;
+  &:hover {
+    transition: 0.5s !important;
+    box-shadow: 0 8px 10px 0px rgb(0, 0, 0, 0.3);
+    transform: scale(1.03) translateY(-10px) !important;
+  }
+  @media (min-width: 750px) {
+    padding: 10px 20px;
+  }
 `;
 const ImageWrapper = styled.div`
   border-radius: 10px;
   overflow: hidden;
+  max-height: 280px;
 `;
 const ReadyToMoveIn = styled.p`
   margin: 0;
@@ -26,7 +43,7 @@ const ReadyToMoveIn = styled.p`
   color: rgb(0, 0, 0, 0.8);
 `;
 const Heading = styled.h3`
-  margin: 0 0 5px 0;
+  margin: 5px 0;
   font-size: 25px;
 `;
 const Para = styled.p`

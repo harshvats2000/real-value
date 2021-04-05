@@ -15,12 +15,13 @@ const FooterWrapper = styled.footer`
   a {
     color: rgb(256, 256, 256, 0.8);
   }
-  padding: 10px;
+  padding: 50px 10px;
   & > div {
     flex: 1;
     margin: 0 30px;
   }
   @media (max-width: 750px) {
+    padding: 20px 10px;
     flex-direction: column;
     & > div {
       margin: 0;
@@ -56,7 +57,6 @@ const FooterLinks = styled.div`
   margin-bottom: 15px;
   & > a {
     margin: 0 4px;
-    text-transform: capitalize;
   }
 `;
 // const SocialLinks = styled.div`
