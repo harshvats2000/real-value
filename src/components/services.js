@@ -1,6 +1,7 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Section = styled.section`
   padding: 20px 0;
@@ -23,8 +24,8 @@ const ListItem = styled.li`
   padding: 10px;
   flex: 1;
   border-radius: 10px;
+  transition: 0.5s !important;
   &:hover {
-    transition: 0.5s !important;
     box-shadow: 0 8px 10px 0px rgb(0, 0, 0, 0.3);
     transform: scale(1.03) translateY(-10px) !important;
   }
@@ -53,11 +54,45 @@ const Para = styled.p`
 `;
 
 const Services = () => {
+  let services = useStaticQuery(graphql`
+    query MyQuery {
+      markdownRemark {
+        id
+        frontmatter {
+          services {
+            name
+            heading
+            desc
+            image {
+              id
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
+      }
+    }
+  `).markdownRemark.frontmatter.services;
+
   return (
     <Section>
       <SectionHeading id="services">Our Services</SectionHeading>
       <List>
-        <ListItem data-aos="fade-up">
+        {services.map((s, i) => {
+          const image = getImage(s.image);
+          return (
+            <ListItem key={i} data-aos="fade-up">
+              <ImageWrapper>
+                <GatsbyImage image={image} alt={s.heading} placeholder="blurred" />
+              </ImageWrapper>
+              <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
+              <Heading>{s.heading}</Heading>
+              <Para>{s.desc}</Para>
+            </ListItem>
+          );
+        })}
+        {/* <ListItem data-aos="fade-up">
           <ImageWrapper>
             <StaticImage src="../images/4-builder.png" alt="Builder floors" placeholder="blurred" />
           </ImageWrapper>
@@ -87,7 +122,7 @@ const Services = () => {
         <ListItem data-aos="fade-up">
           <ImageWrapper>
             <StaticImage
-              src="https://images.unsplash.com/photo-1549479732-ee0adb0f5d32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
+              src=""
               alt="Villas"
               placeholder="blurred"
             />
@@ -95,7 +130,7 @@ const Services = () => {
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Villas/Plots and commercial Shops/SCO'S</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Section>
   );

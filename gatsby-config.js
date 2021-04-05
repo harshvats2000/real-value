@@ -10,7 +10,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-image`,
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -28,6 +27,15 @@ module.exports = {
         path: "./src/pages/"
       },
       __key: "pages"
-    }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/content/`
+      },
+      __key: "content"
+    },
+    "gatsby-transformer-remark"
   ]
 };

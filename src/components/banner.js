@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 100vw;
   @media (min-width: 750px) {
     min-height: 500px;
+    text-align: center;
   }
 `;
 const ImageWrapper = styled.div`
@@ -53,7 +54,7 @@ const Para = styled.p`
   }
 `;
 const Button = styled.button`
-  margin-top: 10px;
+  margin: 10px;
   font-size: 20px;
   font-weight: bold;
   background: transparent;
@@ -61,6 +62,10 @@ const Button = styled.button`
   backdrop-filter: blur(5px);
   width: 150px;
   border: none;
+  @media (min-width: 750px) {
+    margin: 10px auto 0;
+    width: 220px;
+  }
   & > a {
     text-decoration: none;
     color: inherit;
@@ -74,7 +79,6 @@ const Button = styled.button`
     `};
     @media (min-width: 750px) {
       padding: 15px;
-      width: 220px;
     }
   }
 `;
