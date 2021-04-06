@@ -39,8 +39,8 @@ const ImageWrapper = styled.div`
   max-height: 280px;
 `;
 const ReadyToMoveIn = styled.p`
-  margin: 0;
-  font-size: 15px;
+  margin: 6px 0 0 0;
+  font-size: 20px;
   color: rgb(0, 0, 0, 0.8);
 `;
 const Heading = styled.h3`

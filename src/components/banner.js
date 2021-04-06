@@ -114,7 +114,7 @@ const Banner = () => {
       <Body>
         <BodyWrapper>
           <Heading>Dream Homes in Faridabad</Heading>
-          <Para>Buy best property like builder floors, flats, villas in Faridabad.</Para>
+          <Para>Buy best property: Builder Floors | Flats | Villas | Plots/SCO's in Faridabad.</Para>
           <Button onClick={sendMail}>
             <a href={`tel:${contact_number}`}>call now</a>
           </Button>

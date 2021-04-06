@@ -71,8 +71,8 @@ const Footer = () => {
       <FooterLeft>
         <h3>Real Value © {new Date().getFullYear()}</h3>
         <p>
-          <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          We are enthusiast to settle anything in connection with an entrusted real estate. Our team is committed in providing solutions related to
+          real estate.
         </p>
       </FooterLeft>
 

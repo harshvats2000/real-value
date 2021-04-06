@@ -4,18 +4,18 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const reviews = [
   {
-    name: "harsh",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta iure dolorem alias explicabo! Officia minus nihil iste tempora. Dolores labore ipsum quo dolore. Veritatis ratione architecto non fugit beatae!`,
+    name: "Mr. Harish",
+    text: `I am very happy to have dealt with Real Value Properties in buying my flat. They are very good and fair in their dealing.`,
     rating: 5
   },
   {
-    name: "dushyant",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta iure dolorem alias explicabo! Officia minus nihil iste tempora. Dolores labore ipsum quo dolore. Veritatis ratione architecto non fugit beatae!`,
+    name: "Mr. Dhruv",
+    text: `Truly professionals, one year lapsed, still in connection. I'm wishing them luck.`,
     rating: 5
   },
   {
-    name: "guru dutt",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta iure dolorem alias explicabo! Officia minus nihil iste tempora. Dolores labore ipsum quo dolore. Veritatis ratione architecto non fugit beatae!`,
+    name: "Mrs. Poonam",
+    text: `Transparent, simple and hassle free dealings.`,
     rating: 5
   }
 ];
@@ -41,6 +41,7 @@ const List = styled.div`
 `;
 const ListItem = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   padding: 15px 10px;

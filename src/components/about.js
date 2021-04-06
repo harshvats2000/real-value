@@ -28,11 +28,10 @@ const About = () => {
   return (
     <>
       <Section>
-        <SectionHeading id="about">About Real Value</SectionHeading>
+        <SectionHeading id="about">About Real Value Properties</SectionHeading>
         <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis placeat, iure officiis quam omnis iusto laboriosam quisquam nam quo
-          qui, nisi sit unde atque, inventore quidem dolores aliquid aliquam magni nesciunt quaerat dicta ullam sed? Modi quam blanditiis, sed
-          distinctio, maxime iusto alias illum numquam aperiam impedit quisquam totam.
+          We are enthusiast to settle anything in connection with an entrusted real estate. Our team is committed in providing solutions related to
+          real estate.
         </Text>
       </Section>
     </>

@@ -34,12 +34,14 @@ const Name = styled.h3`
   font-size: 20px;
   margin-bottom: 0;
 `;
-const Number = styled.p``;
+const Number = styled.p`
+  font-size: 20px;
+`;
 
 const Team = () => {
   return (
     <Section>
-      <SectionHeading id="team">Team Behind Real Value</SectionHeading>
+      <SectionHeading id="team">Team Behind Real Value Properties</SectionHeading>
 
       <List>
         <ListItem>
