@@ -13,7 +13,7 @@ collections:
     media_folder: ""
     public_folder: ""
     path: "{{name}}/index"
-    folder: "content"
+    folder: "content/services"
     create: true
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
