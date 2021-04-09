@@ -70,8 +70,8 @@ const Page = () => {
     <>
       <Layout>
         <Helmet
-          title="Affordable Housing in Faridabad | Real Value"
-          description="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."
+          title="Flats in Faridabad | Real Value"
+          description="Buy Flats in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value."
         />
         <Header />
         <main>

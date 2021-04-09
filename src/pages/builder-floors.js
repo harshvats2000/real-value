@@ -71,7 +71,7 @@ const Page = () => {
       <Layout>
         <Helmet
           title="Builder Floors in Faridabad | Real Value"
-          description="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."
+          description="Buy Builder Floors in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value."
         />
         <Header />
         <main>

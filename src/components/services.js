@@ -1,8 +1,7 @@
 import React from "react";
-import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import convertToSlug from "../utils/convertToSlug";
+import { Link } from "gatsby";
 import { SERVICES } from "../constants";
 
 const Section = styled.section`

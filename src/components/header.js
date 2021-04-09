@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { LINKS } from "../constants";
 
 const Container = styled.header``;
@@ -114,7 +114,7 @@ const Header = () => {
           <Nav>
             {LINKS.map((link, i) => (
               <NavItem key={i}>
-                <Link to={`${link.url}`}>{link.label}</Link>
+                <Link to={`/${link.url}`}>{link.label}</Link>
               </NavItem>
             ))}
           </Nav>

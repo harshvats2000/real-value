@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "real-value",
+    title: "Real Value",
     siteUrl: "https://real-value.netlify.app"
   },
   plugins: [

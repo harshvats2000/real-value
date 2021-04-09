@@ -53,7 +53,7 @@ const Page = (props) => {
 
   return (
     <>
-      <Helmet title={name} description={description} />
+      <Helmet title={`${name} | Real Value`} description={description} />
       <Layout>
         <Header />
         <Banner img={image} alt={name} title={name} desc={description} />

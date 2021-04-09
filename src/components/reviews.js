@@ -53,7 +53,7 @@ const ListItem = styled.div`
     margin: 10px;
   }
   ${(props) =>
-    props.item == 1 &&
+    props.item === 1 &&
     css`
       background-image: radial-gradient(
         circle 465px at -15.1% -25%,
@@ -63,12 +63,12 @@ const ListItem = styled.div`
       );
     `}
   ${(props) =>
-    props.item == 2 &&
+    props.item === 2 &&
     css`
       background-image: radial-gradient(circle 939px at 94.7% 50%, rgba(0, 178, 169, 1) 0%, rgba(0, 106, 101, 1) 76.9%);
     `}
   ${(props) =>
-    props.item == 3 &&
+    props.item === 3 &&
     css`
       background-image: radial-gradient(circle farthest-corner at 47.4% 55%, rgba(218, 61, 61, 1) 0%, rgba(170, 13, 71, 0.81) 90%);
     `}
