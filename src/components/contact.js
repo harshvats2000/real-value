@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { contact_email } from "../constants";
+import { CONTACT_EMAIL } from "../constants";
 
 const Section = styled.section`
   width: 300px;
@@ -82,7 +82,7 @@ const Contact = () => {
     <Section>
       <SectionHeading id="contact">Request A Call Back</SectionHeading>
       <FormWrapper>
-        <Form action={`https://formsubmit.co/${contact_email}`} method="POST">
+        <Form action={`https://formsubmit.co/${CONTACT_EMAIL}`} method="POST">
           <input type="hidden" name="_cc" value="info@digivats.com" />
           <input type="hidden" name="_subject" value="Message from your website."></input>
           <input type="hidden" name="_template" value="table"></input>

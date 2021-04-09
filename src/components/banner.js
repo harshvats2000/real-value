@@ -1,14 +1,14 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled, { css } from "styled-components";
-import { contact_number, contact_email } from "../constants";
+import { CONTACT_NUMBER, CONTACT_EMAIL } from "../constants";
 
 const Container = styled.div`
   position: relative;
   min-height: 400px;
   width: 100vw;
   @media (min-width: 750px) {
-    min-height: 500px;
+    min-height: 550px;
     text-align: center;
   }
 `;
@@ -51,6 +51,8 @@ const Para = styled.p`
   margin: 0 0 15px 0;
   @media (min-width: 750px) {
     font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto 15px;
   }
 `;
 const Button = styled.button`
@@ -83,7 +85,8 @@ const Button = styled.button`
   }
 `;
 
-const Banner = () => {
+const Banner = ({ img, alt, title, desc }) => {
+  const image = getImage(img);
   const sendMail = (e) => {
     fetch("https://real-value-sendmail-api.herokuapp.com/api/sendmail", {
       method: "POST",
@@ -94,7 +97,7 @@ const Banner = () => {
       body: JSON.stringify({
         subject: "Someone Clicked on call now button on real value website.",
         text: "Someone clicked on call now button on real value website.",
-        toEmails: [contact_email]
+        toEmails: [CONTACT_EMAIL]
       })
     })
       .then((res) => console.log(res))
@@ -104,19 +107,14 @@ const Banner = () => {
   return (
     <Container>
       <ImageWrapper>
-        <StaticImage
-          src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-          placeholder="blurred"
-          alt="image"
-          style={{ height: "100%" }}
-        />
+        <GatsbyImage image={image} alt={alt} style={{ height: "100%" }} />
       </ImageWrapper>
       <Body>
         <BodyWrapper>
-          <Heading>Dream Homes in Faridabad</Heading>
-          <Para>Buy best property: Builder Floors | Flats | Villas | Plots/SCO's in Faridabad.</Para>
+          <Heading>{title}</Heading>
+          <Para>{desc}</Para>
           <Button onClick={sendMail}>
-            <a href={`tel:${contact_number}`}>call now</a>
+            <a href={`tel:${CONTACT_NUMBER}`}>call now</a>
           </Button>
         </BodyWrapper>
       </Body>

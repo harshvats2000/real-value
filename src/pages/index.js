@@ -10,11 +10,23 @@ import Reviews from "../components/reviews";
 import Layout from "../Layout";
 import Banner from "../components/banner";
 import About from "../components/about";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Main = styled.main``;
 
 // markup
 const Home = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "bg-home.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
+    }
+  `);
+  const img = data.file;
+
   return (
     <Layout>
       <Helmet
@@ -23,7 +35,12 @@ const Home = () => {
       />
       <Header />
       <Main>
-        <Banner />
+        <Banner
+          img={img}
+          alt="real value home interior"
+          title="Dream Homes in Faridabad"
+          desc="Buy best property: Builder Floors | Flats | Villas | Plots/SCO's in Faridabad."
+        />
         <Contact />
         <Services />
         <Reviews />

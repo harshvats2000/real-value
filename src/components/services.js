@@ -1,10 +1,11 @@
 import React from "react";
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import convertToSlug from "../utils/convertToSlug";
 
 const Section = styled.section`
-  padding: 20px 0;
+  padding: 20px;
 `;
 const SectionHeading = styled.h2`
   text-align: center;
@@ -52,53 +53,32 @@ const Para = styled.p`
   color: rgb(0, 0, 0, 0.7);
   line-height: 24px;
 `;
+const ViewMore = styled.button`
+  padding: 0;
+  border: none;
+  a {
+    background: white;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+`;
 
 const Services = () => {
-  let services = useStaticQuery(graphql`
-    query MyQuery {
-      markdownRemark {
-        id
-        frontmatter {
-          services {
-            name
-            heading
-            desc
-            image {
-              id
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
-              }
-            }
-          }
-        }
-      }
-    }
-  `).markdownRemark.frontmatter.services;
-
   return (
     <Section>
       <SectionHeading id="services">Our Services</SectionHeading>
       <List>
-        {services.map((s, i) => {
-          const image = getImage(s.image);
-          return (
-            <ListItem key={i} data-aos="fade-up">
-              <ImageWrapper>
-                <GatsbyImage image={image} alt={s.heading} placeholder="blurred" />
-              </ImageWrapper>
-              <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
-              <Heading>{s.heading}</Heading>
-              <Para>{s.desc}</Para>
-            </ListItem>
-          );
-        })}
-        {/* <ListItem data-aos="fade-up">
+        <ListItem data-aos="fade-up">
           <ImageWrapper>
             <StaticImage src="../images/4-builder.png" alt="Builder floors" placeholder="blurred" />
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Builder floors in Faridabad</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <ViewMore>
+            <Link to="builder-floors">View More</Link>
+          </ViewMore>
         </ListItem>
 
         <ListItem data-aos="fade-up">
@@ -108,6 +88,9 @@ const Services = () => {
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Affordable housing in Faridabad</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <ViewMore>
+            <Link to="affordable-housing">View More</Link>
+          </ViewMore>
         </ListItem>
 
         <ListItem data-aos="fade-up">
@@ -117,20 +100,22 @@ const Services = () => {
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Flats in Faridabad</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <ViewMore>
+            <Link to="flats">View More</Link>
+          </ViewMore>
         </ListItem>
 
         <ListItem data-aos="fade-up">
           <ImageWrapper>
-            <StaticImage
-              src=""
-              alt="Villas"
-              placeholder="blurred"
-            />
+            <StaticImage src="../images/villas.jpeg" alt="Villas" placeholder="blurred" />
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Villas/Plots and commercial Shops/SCO'S</Heading>
           <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
-        </ListItem> */}
+          <ViewMore>
+            <Link to="commercials">View More</Link>
+          </ViewMore>
+        </ListItem>
       </List>
     </Section>
   );

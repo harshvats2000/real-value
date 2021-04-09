@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaLocationArrow, FaPhone, FaMailBulk } from "react-icons/fa";
 import { Link } from "gatsby";
-import { contact_number, contact_email, Links } from "../constants";
+import { CONTACT_NUMBER, CONTACT_EMAIL, LINKS } from "../constants";
 
 const FooterWrapper = styled.footer`
   background-color: #7f5a83;
@@ -91,21 +91,21 @@ const Footer = () => {
         <Number>
           <FaPhone />
           <p>
-            <a href={`tel:${contact_number}`}>{contact_number}</a>
+            <a href={`tel:${CONTACT_NUMBER}`}>{CONTACT_NUMBER}</a>
           </p>
         </Number>
 
         <Email>
           <FaMailBulk />
           <p>
-            <a href={`mailto:${contact_email}`}>{contact_email}</a>
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
           </p>
         </Email>
       </FooterCenter>
 
       <FooterRight>
         <FooterLinks>
-          {Links.map((link, i) => (
+          {LINKS.map((link, i) => (
             <Link key={i} to={`${link.url}`}>
               {link.label}
             </Link>

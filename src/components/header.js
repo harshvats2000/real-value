@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import styled, { keyframes } from "styled-components";
-import { Links } from "../constants";
+import { LINKS } from "../constants";
 
 const Container = styled.header``;
 
@@ -21,6 +21,10 @@ const Logo = styled.p`
   font-weight: bold;
   font-size: 20px;
   margin: 0;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 
 const Nav = styled.ul`
@@ -99,14 +103,16 @@ const Header = () => {
     <>
       <Container>
         <Wrapper>
-          <Logo>Real Value</Logo>
+          <Logo>
+            <Link to="/">Real Value</Link>
+          </Logo>
           <MenuIcon onClick={() => setOpenMenu(!openMenu)}>
             <span></span>
             <span></span>
             <span></span>
           </MenuIcon>
           <Nav>
-            {Links.map((link, i) => (
+            {LINKS.map((link, i) => (
               <NavItem key={i}>
                 <Link to={`${link.url}`}>{link.label}</Link>
               </NavItem>
@@ -114,7 +120,7 @@ const Header = () => {
           </Nav>
         </Wrapper>
         <MobileNav id="header-nav-mobile">
-          {Links.map((link, i) => (
+          {LINKS.map((link, i) => (
             <NavItem key={i}>
               <Link to={`${link.url}`}>{link.label}</Link>
             </NavItem>
