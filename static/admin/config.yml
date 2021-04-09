@@ -30,13 +30,14 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
-          label: "Layout Plans",
+          label: "Floor Plans",
           name: "plan",
           widget: "list",
-          required: true,
+          required: false,
+          default: [],
           fields:
             [
               { label: "Plan Name", name: "name", required: true, widget: "string" },
-              { label: "Image of Layout Plan", name: "img", required: true, widget: "image" }
+              { label: "Image of Floor Plan", name: "img", required: true, widget: "image" }
             ]
         }

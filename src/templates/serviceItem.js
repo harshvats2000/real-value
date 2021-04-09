@@ -21,7 +21,7 @@ const Page = (props) => {
       allMarkdownRemark {
         edges {
           node {
-            excerpt(format: HTML)
+            html
             frontmatter {
               slug
               name
@@ -48,7 +48,7 @@ const Page = (props) => {
   `).allMarkdownRemark.edges.filter((edge) => edge.node.frontmatter.slug === slug)[0];
   const {
     frontmatter: { image, name, category, description, plan },
-    excerpt
+    html
   } = data.node;
 
   return (
@@ -61,11 +61,11 @@ const Page = (props) => {
           <Tabs>
             <TabList>
               <Tab>Overview</Tab>
-              <Tab>Layout Plan</Tab>
+              <Tab>Floor Plan</Tab>
             </TabList>
 
             <TabPanel>
-              <article dangerouslySetInnerHTML={{ __html: excerpt }} />
+              <article dangerouslySetInnerHTML={{ __html: html }} />
             </TabPanel>
             <TabPanel>
               <ul>

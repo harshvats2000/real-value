@@ -1,18 +1,35 @@
 ---
 category: flats
-name: bptp grandeura
-image: ./grandeura.png
-slug: bptp-grandeura
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate mi magna, id aliquam ipsum faucibus sit amet. Nam pretium elit auctor massa mattis"
-plan:
-  - name: plan 1
-    img: ./grandeura.png
-  - name: plan 2
-    img: ./grandeura.png
+name: Emerald Heights
+image: ./emerald.jpeg
+slug: emerald-heights
+description: "Flats in Emerald Heights in sector-88, faridabad, Haryana."
+plan: [{ name: "2 BHK - 1260 sqft (Tower - B, C, E and F", img: ./2bhk1260t.jpeg }]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate mi magna, id aliquam ipsum faucibus sit amet. Nam pretium elit auctor massa mattis
-sdkjf
-lakjsdf
+With ultra-modern amenities & distinct architectural design, Emerald Heights is a beautiful residential project that reflects the urban modern lifestyle. Extended over 6.126 acres land, this project is laid out very thoughtfully & its unmatched architecture and premium location makes it an ideal choice for home seekers.
 
-asdlfkjsdlfj
+The project consists of 384 residential units & Conveninent Shopping Complex. All the units are lavishly designed keeping all the contemporary requirements of prospective home buyers. Emerald Heights is not just an ordinary residential project, it is the epitome of comfort & luxury living at an affordable price. Its seamless connectivity with the prime location of Faridabad makes it the perfect housing solution for people.
+
+The Emerald Heights is equipped with home seekers amenities such as swimming pool, community centre & Landscaped Area. Its multi-tier security arrangements, modern units, and beautiful landscape make it one of the best residential projects in the Faridabad & It lives up to the expectations of its customers.
+
+Emerald Heights is aptly priced & offers a blissful living experience that you will cherish for a lifetime. So if you are looking for a residential property in Faridabad, it could be the address you ve been looking for.
+
+### Highligts
+
+1. Adjoining AIMS Hospital ( Over 2,000 Beds )
+1. Earthquake Resistant RCC Structure Designed
+1. Reinforced Concrete footings and column with raft.
+1. Single Gate 24x7 Security Guard
+1. Open to all Retail shops
+1. Open air party lounge Area
+1. Cricket practice pitch
+
+### Amenities
+
+1. Power Backup
+1. Fire-safetry equipments
+1. Car Parking
+1. Swimming Pool
+1. 24m wide road
+1. 24x7 Water supply
