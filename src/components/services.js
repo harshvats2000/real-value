@@ -3,6 +3,7 @@ import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import convertToSlug from "../utils/convertToSlug";
+import { SERVICES } from "../constants";
 
 const Section = styled.section`
   padding: 20px;
@@ -75,7 +76,7 @@ const Services = () => {
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Builder floors in Faridabad</Heading>
-          <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <Para>{SERVICES[0].desc}</Para>
           <ViewMore>
             <Link to="builder-floors">View More</Link>
           </ViewMore>
@@ -87,7 +88,7 @@ const Services = () => {
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Affordable housing in Faridabad</Heading>
-          <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <Para>{SERVICES[1].desc}</Para>
           <ViewMore>
             <Link to="affordable-housing">View More</Link>
           </ViewMore>
@@ -99,7 +100,7 @@ const Services = () => {
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Flats in Faridabad</Heading>
-          <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <Para>{SERVICES[2].desc}</Para>
           <ViewMore>
             <Link to="flats">View More</Link>
           </ViewMore>
@@ -111,7 +112,7 @@ const Services = () => {
           </ImageWrapper>
           <ReadyToMoveIn>Ready to move in</ReadyToMoveIn>
           <Heading>Villas/Plots and commercial Shops/SCO'S</Heading>
-          <Para>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reprehenderit consectetur ut labore quod eligendi.</Para>
+          <Para>{SERVICES[3].desc}</Para>
           <ViewMore>
             <Link to="commercials">View More</Link>
           </ViewMore>

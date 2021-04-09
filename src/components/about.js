@@ -30,7 +30,7 @@ const About = () => {
       <Section>
         <SectionHeading id="about">About Real Value Properties</SectionHeading>
         <Text>
-          We are enthusiast to settle anything in connection with an entrusted real estate. Our team is committed in providing solutions related to
+          We are enthusiastic to settle anything in connection with an entrusted real estate. Our team is committed in providing solutions related to
           real estate.
         </Text>
       </Section>

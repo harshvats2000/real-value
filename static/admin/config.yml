@@ -15,10 +15,12 @@ collections:
     path: "{{name}}/index"
     folder: "content/services"
     create: true
+    delete: true
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "string", required: true }
       - { label: "Featured Image", name: "image", widget: "image", required: true }
+      - { label: "URL", name: "slug", widget: "string", required: true }
       - {
           label: "Category",
           name: "category",

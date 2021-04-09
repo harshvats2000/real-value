@@ -10,9 +10,31 @@ import { SERVICES } from "../constants";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const List = styled.ul``;
-const ListItem = styled.li``;
-const ImageWrapper = styled.div``;
+const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+`;
+const ListItem = styled.li`
+  padding: 15px;
+  min-width: 300px;
+  flex: 33.33%;
+  list-style: none;
+  text-align: center;
+  @media (max-width: 750px) {
+    margin-bottom: 15px;
+  }
+`;
+const ImageWrapper = styled.div`
+  overflow: hidden;
+  img {
+    border-radius: 10px !important;
+  }
+`;
+const Name = styled.h3`
+  font-size: 25px;
+  margin: 10px 0;
+`;
 
 const Page = () => {
   const data = useStaticQuery(graphql`
@@ -63,8 +85,8 @@ const Page = () => {
                   <ImageWrapper>
                     <GatsbyImage image={getImage(image)} alt={name} />
                   </ImageWrapper>
-                  <p>{name}</p>
-                  <Link to={`/category/${slug}`}>View More</Link>
+                  <Name>{name}</Name>
+                  <Link to={`/${category}/${slug}`}>View More</Link>
                 </ListItem>
               );
             })}
