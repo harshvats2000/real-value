@@ -12,6 +12,9 @@ import styled from "styled-components";
 
 const Content = styled.section`
   padding: 10px;
+  line-height: 30px;
+  max-width: 700px;
+  margin: auto;
 `;
 
 const Page = (props) => {

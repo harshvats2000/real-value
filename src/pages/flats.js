@@ -18,9 +18,14 @@ const List = styled.ul`
 const ListItem = styled.li`
   padding: 15px;
   min-width: 300px;
-  flex: 33.33%;
+  flex: 25%;
   list-style: none;
   text-align: center;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0 8px 10px 0px rgb(0, 0, 0, 0.3);
+    transform: scale(1.03) translateY(-10px) !important;
+  }
   @media (max-width: 750px) {
     margin-bottom: 15px;
   }
@@ -53,7 +58,7 @@ const Page = () => {
               category
               image {
                 childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED, width: 300)
+                  gatsbyImageData(placeholder: BLURRED, width: 300, height: 300)
                 }
               }
             }
