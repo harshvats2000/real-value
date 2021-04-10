@@ -22,16 +22,21 @@ const List = styled.ul`
   }
 `;
 const ListItem = styled.li`
-  padding: 10px;
+  padding: 20px 10px;
   flex: 1;
   border-radius: 10px;
   transition: 0.5s !important;
-  &:hover {
-    box-shadow: 0 8px 10px 0px rgb(0, 0, 0, 0.3);
-    transform: scale(1.03) translateY(-10px) !important;
-  }
   @media (min-width: 750px) {
-    padding: 10px 20px;
+    img {
+      transition: 0.5s !important;
+      filter: grayscale(1) brightness(0.5) !important;
+    }
+    &:hover {
+      transform: scale(1.03) translateY(-10px) !important;
+      img {
+        filter: grayscale(0) brightness(1) !important;
+      }
+    }
   }
 `;
 const ImageWrapper = styled.div`
@@ -49,7 +54,6 @@ const Heading = styled.h3`
   font-size: 25px;
 `;
 const Para = styled.p`
-  margin: 0 0 10px 0;
   color: rgb(0, 0, 0, 0.7);
   line-height: 24px;
 `;
@@ -57,7 +61,9 @@ const ViewMore = styled.button`
   padding: 0;
   border: none;
   a {
-    background: white;
+    background: ${(props) => props.theme.secondary};
+    border-radius: 4px;
+    color: white;
     padding: 10px;
     font-size: 18px;
     text-decoration: none;

@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-  primary: "#b0f3f6"
+  primary: "#b0f3f6",
+  secondary: "#0283ad"
 };
 
 export default function Layout({ children }) {

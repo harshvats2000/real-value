@@ -29,10 +29,13 @@ const Home = () => {
 
   return (
     <Layout>
-      <Helmet
-        title="Buy your dream property in greater faridabad | Real Value"
-        description="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."
-      />
+      <Helmet>
+        <title>Buy your dream property in greater faridabad | Real Value</title>
+        <meta
+          name="description"
+          content="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."
+        />
+      </Helmet>
       <Header />
       <Main>
         <Banner

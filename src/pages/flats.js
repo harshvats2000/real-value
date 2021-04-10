@@ -13,18 +13,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 50px 0;
+  max-width: 1000px;
+  margin: auto;
 `;
 const ListItem = styled.li`
   padding: 15px;
-  min-width: 300px;
-  flex: 25%;
+  width: 300px;
+  height: 420px;
   list-style: none;
-  text-align: center;
   transition: 0.5s;
-  &:hover {
-    box-shadow: 0 8px 10px 0px rgb(0, 0, 0, 0.3);
-    transform: scale(1.03) translateY(-10px) !important;
+  @media (min-width: 750px) {
+    img {
+      transition: 0.5s !important;
+      filter: grayscale(1) brightness(0.5) !important;
+    }
+    &:hover {
+      transform: scale(1.03) translateY(-10px) !important;
+      img {
+        filter: grayscale(0) brightness(1) !important;
+      }
+    }
   }
   @media (max-width: 750px) {
     margin-bottom: 15px;
@@ -38,7 +47,19 @@ const ImageWrapper = styled.div`
 `;
 const Name = styled.h3`
   font-size: 25px;
-  margin: 10px 0;
+  margin-top: 0;
+`;
+const ViewMore = styled.button`
+  padding: 0;
+  border: none;
+  a {
+    background: ${(props) => props.theme.secondary};
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
 `;
 
 const Page = () => {
@@ -74,10 +95,10 @@ const Page = () => {
   return (
     <>
       <Layout>
-        <Helmet
-          title="Flats in Faridabad | Real Value"
-          description="Buy Flats in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value."
-        />
+        <Helmet>
+          <title>Flats in Faridabad | Real Value</title>
+          <meta name="description" content="Buy Flats in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value." />
+        </Helmet>
         <Header />
         <main>
           <Banner title={SERVICES[2].heading} desc={SERVICES[2].desc} img={img} alt={SERVICES[2].heading} />
@@ -91,7 +112,9 @@ const Page = () => {
                     <GatsbyImage image={getImage(image)} alt={name} />
                   </ImageWrapper>
                   <Name>{name}</Name>
-                  <Link to={`/${category}/${slug}`}>View More</Link>
+                  <ViewMore>
+                    <Link to={`/${category}/${slug}`}>View More</Link>
+                  </ViewMore>
                 </ListItem>
               );
             })}
