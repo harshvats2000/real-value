@@ -57,7 +57,9 @@ const Page = (props) => {
   return (
     <>
       <Helmet>
-        <title>{name} | Real Value</title>
+        <title>
+          {name} | {category} | Real Value
+        </title>
         <meta name="description" content={description} />
       </Helmet>
       <Layout>
