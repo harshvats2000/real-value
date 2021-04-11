@@ -56,29 +56,28 @@ const Para = styled.p`
   }
 `;
 const Button = styled.button`
-  margin: 10px;
+  margin: 10px 0;
   font-size: 20px;
   font-weight: bold;
-  background: transparent;
   text-transform: uppercase;
   backdrop-filter: blur(5px);
   width: 150px;
   border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 0;
   @media (min-width: 750px) {
     margin: 10px auto 0;
     width: 220px;
   }
   & > a {
+    background: linear-gradient(0deg, #3fa200, #00ff08);
+    color: white;
     text-decoration: none;
-    color: inherit;
     display: block;
     height: 100%;
     width: 100%;
     padding: 10px;
-    ${(props) => css`
-      border: 2px solid ${props.theme.primary};
-      color: ${props.theme.primary};
-    `};
     @media (min-width: 750px) {
       padding: 15px;
     }

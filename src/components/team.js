@@ -68,7 +68,7 @@ const Team = () => {
 
         <ListItem>
           <ImageWrapper>
-            <StaticImage src="https://via.placeholder.com/250.jpeg" alt="Nitin Gard" placeholder="blurred" layout="fixed" width={250} height={250} />
+            <StaticImage src="../images/nitin.jpeg" alt="Nitin Garg" placeholder="blurred" layout="fixed" width={250} height={250} />
           </ImageWrapper>
 
           <Body>

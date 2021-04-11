@@ -16,7 +16,7 @@ export const ListItem = styled.li`
   @media (min-width: 750px) {
     img {
       transition: 0.5s !important;
-      filter: grayscale(1) brightness(0.5) !important;
+      filter: grayscale(1) brightness(0.8) !important;
     }
     &:hover {
       transform: scale(1.03) translateY(-10px) !important;
@@ -26,6 +26,7 @@ export const ListItem = styled.li`
     }
   }
   @media (max-width: 750px) {
+    margin: auto;
     margin-bottom: 15px;
   }
 `;
@@ -43,9 +44,9 @@ export const ViewMore = styled.button`
   padding: 0;
   border: none;
   a {
-    background: ${(props) => props.theme.secondary};
-    border-radius: 4px;
+    background: linear-gradient(0deg, #3fa200, #00ff08);
     color: white;
+    border-radius: 4px;
     padding: 10px;
     font-size: 18px;
     text-decoration: none;
