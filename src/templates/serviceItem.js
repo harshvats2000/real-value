@@ -56,7 +56,10 @@ const Page = (props) => {
 
   return (
     <>
-      <Helmet title={`${name} | Real Value`} description={description} />
+      <Helmet>
+        <title>{name} | Real Value</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <Layout>
         <Header />
         <Banner img={image} alt={name} title={name} desc={description} />

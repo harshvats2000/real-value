@@ -5,62 +5,9 @@ import Header from "../components/header";
 import Banner from "../components/banner";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { SERVICES } from "../constants";
-import styled from "styled-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
-const List = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 0;
-  max-width: 1000px;
-  margin: auto;
-`;
-const ListItem = styled.li`
-  padding: 15px;
-  width: 300px;
-  height: 420px;
-  list-style: none;
-  transition: 0.5s;
-  @media (min-width: 750px) {
-    img {
-      transition: 0.5s !important;
-      filter: grayscale(1) brightness(0.5) !important;
-    }
-    &:hover {
-      transform: scale(1.03) translateY(-10px) !important;
-      img {
-        filter: grayscale(0) brightness(1) !important;
-      }
-    }
-  }
-  @media (max-width: 750px) {
-    margin-bottom: 15px;
-  }
-`;
-const ImageWrapper = styled.div`
-  overflow: hidden;
-  img {
-    border-radius: 10px !important;
-  }
-`;
-const Name = styled.h3`
-  font-size: 25px;
-  margin-top: 0;
-`;
-const ViewMore = styled.button`
-  padding: 0;
-  border: none;
-  a {
-    background: ${(props) => props.theme.secondary};
-    border-radius: 4px;
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    text-decoration: none;
-  }
-`;
+import CategoriesPage from "../components/categoriesPage";
 
 const Page = () => {
   const data = useStaticQuery(graphql`
@@ -103,22 +50,7 @@ const Page = () => {
         <main>
           <Banner title={SERVICES[0].heading} desc={SERVICES[0].desc} img={img} alt={SERVICES[0].heading} />
           <Contact />
-          <List>
-            {list.map((l, i) => {
-              const { name, image, slug, category } = l.node.frontmatter;
-              return (
-                <ListItem key={i}>
-                  <ImageWrapper>
-                    <GatsbyImage image={getImage(image)} alt={name} />
-                  </ImageWrapper>
-                  <Name>{name}</Name>
-                  <ViewMore>
-                    <Link to={`/${category}/${slug}`}>View More</Link>
-                  </ViewMore>
-                </ListItem>
-              );
-            })}
-          </List>
+          <CategoriesPage list={list} />
         </main>
         <Footer />
       </Layout>
