@@ -36,6 +36,14 @@ module.exports = {
       },
       __key: "services"
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "notice",
+        path: `${__dirname}/content/notice`
+      },
+      __key: "notice"
+    },
     "gatsby-transformer-remark"
   ]
 };

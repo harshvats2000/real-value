@@ -41,3 +41,7 @@ collections:
               { label: "Image of Floor Plan", name: "img", required: true, widget: "image" }
             ]
         }
+  - name: "notice"
+    label: "Notice on top of website"
+    default: ""
+    widget: "string"
