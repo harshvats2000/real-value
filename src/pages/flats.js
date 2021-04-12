@@ -20,13 +20,14 @@ const Page = () => {
       allMarkdownRemark(filter: { frontmatter: { category: { eq: "flats" } } }) {
         edges {
           node {
+            excerpt
             frontmatter {
               name
               slug
               category
               image {
                 childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED, width: 300, height: 300)
+                  gatsbyImageData(placeholder: BLURRED, width: 350, height: 350)
                 }
               }
             }

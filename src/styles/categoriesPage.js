@@ -10,7 +10,6 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   padding: 15px;
   width: 300px;
-  height: 420px;
   list-style: none;
   transition: 0.5s;
   @media (min-width: 750px) {
@@ -26,7 +25,8 @@ export const ListItem = styled.li`
     }
   }
   @media (max-width: 750px) {
-    margin: auto;
+    width: 100%;
+    height: unset;
     margin-bottom: 15px;
   }
 `;
@@ -38,15 +38,21 @@ export const ImageWrapper = styled.div`
 `;
 export const Name = styled.h3`
   font-size: 25px;
-  margin-top: 0;
+  margin: 0;
+`;
+export const Para = styled.p`
+  line-height: 25px;
+  color: rgb(0, 0, 0, 0.7);
 `;
 export const ViewMore = styled.button`
   padding: 0;
   border: none;
+  border-radius: 4px;
+  overflow: hidden;
   a {
+    display: block;
     background: linear-gradient(0deg, #3fa200, #00ff08);
     color: white;
-    border-radius: 4px;
     padding: 10px;
     font-size: 18px;
     text-decoration: none;
