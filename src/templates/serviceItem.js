@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import Contact from "../components/contact";
 import Layout from "../Layout";
 import { Helmet } from "react-helmet";
 import Banner from "../components/banner";
@@ -13,8 +14,9 @@ import styled from "styled-components";
 const Content = styled.section`
   padding: 10px;
   line-height: 30px;
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
+  background: #f1f1f1;
 `;
 
 const Page = (props) => {
@@ -66,6 +68,9 @@ const Page = (props) => {
         <Header />
         <Banner img={image} alt={name} title={name} desc={description} />
         <Content>
+          <h2 style={{ textTransform: "capitalize" }}>
+            {category} {">"} {name}
+          </h2>
           <Tabs>
             <TabList>
               <Tab>Overview</Tab>
@@ -76,17 +81,22 @@ const Page = (props) => {
               <article dangerouslySetInnerHTML={{ __html: html }} />
             </TabPanel>
             <TabPanel>
-              <ul>
-                {plan.map((p, i) => (
-                  <li key={i}>
-                    <p>{p.name}</p>
-                    <GatsbyImage image={getImage(p.img)} alt={name} />
-                  </li>
-                ))}
-              </ul>
+              {plan.length === 0 ? (
+                <h1>No Floor plan available.</h1>
+              ) : (
+                <ul>
+                  {plan.map((p, i) => (
+                    <li key={i}>
+                      <p>{p.name}</p>
+                      <GatsbyImage image={getImage(p.img)} alt={name} />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </TabPanel>
           </Tabs>
         </Content>
+        <Contact />
         <Footer />
       </Layout>
     </>

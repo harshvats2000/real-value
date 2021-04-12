@@ -42,6 +42,13 @@ collections:
             ]
         }
   - name: "notice"
-    label: "Notice on top of website"
-    default: ""
-    widget: "string"
+    label: "Notice"
+    description: "Notice which will appear at the top of website"
+    media_folder: ""
+    public_folder: ""
+    path: "{{name}}/index"
+    folder: "content/notice"
+    create: false
+    delete: false
+    fields:
+      - { name: "notice", label: "Notice", widget: "string", default: "" }
