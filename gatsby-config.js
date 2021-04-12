@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Real Value",
-    siteUrl: "https://real-value.netlify.app"
+    siteUrl: "https://real-value.in"
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
