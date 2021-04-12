@@ -26,7 +26,6 @@ const Notice = () => {
     }
   `);
   const notice = data.allMarkdownRemark.edges[0].node.html;
-  console.log(notice);
   return notice === "" ? null : <Para dangerouslySetInnerHTML={{ __html: notice }} />;
 };
 

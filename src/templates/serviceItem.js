@@ -21,7 +21,7 @@ const Page = (props) => {
   const { slug } = props.pageContext;
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { name: { ne: "notice" } } }) {
         edges {
           node {
             html

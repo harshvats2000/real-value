@@ -1,7 +1,7 @@
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { name: { ne: "notice" } } }) {
         edges {
           node {
             frontmatter {
