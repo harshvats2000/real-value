@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Buy your dream property in greater faridabad | Real Value</title>
+        <title>Buy your dream property in Greater Faridabad | Real Value Properties</title>
         <meta
           name="description"
           content="Buy best properties like builder floors, flats, affordable housing, and villas in greater faridabad (Neharpar) from genuine buyers."

@@ -44,7 +44,7 @@ const Page = () => {
     <>
       <Layout>
         <Helmet>
-          <title>Flats in Faridabad | Real Value</title>
+          <title>Flats in Faridabad | Real Value Properties</title>
           <meta name="description" content="Buy Flats in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value." />
         </Helmet>
         <Header />

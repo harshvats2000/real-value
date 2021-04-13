@@ -43,7 +43,7 @@ const Page = () => {
   return (
     <>
       <Helmet>
-        <title>Builder Floors in Faridabad | Real Value</title>
+        <title>Builder Floors in Faridabad | Real Value Properties</title>
         <meta name="description" content="Buy Builder Floors in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value." />
       </Helmet>
       <Layout>

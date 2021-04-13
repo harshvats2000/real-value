@@ -60,7 +60,7 @@ const Page = (props) => {
     <>
       <Helmet>
         <title>
-          {name} | {category} | Real Value
+          {name} | {category} in Faridabad | Real Value Properties
         </title>
         <meta name="description" content={description} />
       </Helmet>

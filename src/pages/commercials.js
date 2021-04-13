@@ -44,7 +44,7 @@ const Page = () => {
     <>
       <Layout>
         <Helmet>
-          <title>Commercial Properties in Faridabad | Real Value</title>
+          <title>Commercial Properties in Faridabad | Real Value Properties</title>
           <meta
             name="description"
             content="Buy Commercial Properties like Shops, SCOs and Villa's/Plots in greater faridabad (Neharpar), sec-85, sec-86 from genuine buyers like Real Value."
