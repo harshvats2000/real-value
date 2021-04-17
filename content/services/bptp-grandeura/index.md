@@ -8,7 +8,7 @@ plan:
   - name: 2 BHK - 1260 sqft (Tower - B, C, E and F
     img: ./2bhk1260t.jpeg
 ---
-With ultra-modern amenities & distinct architectural design, Emerald Heights is a beautiful residential project that reflects the urban modern lifestyle. Extended over 6.126 acres land, this project is laid out very thoughtfully & its unmatched architecture and premium location makes it an ideal choice for home seekers. hello
+With ultra-modern amenities & distinct architectural design, Emerald Heights is a beautiful residential project that reflects the urban modern lifestyle. Extended over 6.126 acres land, this project is laid out very thoughtfully & its unmatched architecture and premium location makes it an ideal choice for home seekers.
 
 The project consists of 384 residential units & Conveninent Shopping Complex. All the units are lavishly designed keeping all the contemporary requirements of prospective home buyers. Emerald Heights is not just an ordinary residential project, it is the epitome of comfort & luxury living at an affordable price. Its seamless connectivity with the prime location of Faridabad makes it the perfect housing solution for people.
 
