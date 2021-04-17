@@ -70,6 +70,12 @@ const FooterLinks = styled.div`
   }
 `;
 
+const Disclaimer = styled.p`
+  color: rgb(256, 256, 256, 0.7);
+  margin: 10px auto;
+  max-width: 1100px;
+`;
+
 const Digivats = styled.p`
   margin: 0;
   padding-bottom: 10px;
@@ -135,6 +141,10 @@ const Footer = () => {
           </FooterLinks>
         </FooterRight>
       </FooterWrapper>
+      <Disclaimer>
+        By accessing this website, the viewer confirms that all the information including brochures, marketing collaterals, etc on this website are
+        solely for informational purposes only. For recent details, please call at the numbers given in the website or visit our office address.
+      </Disclaimer>
       <Digivats>
         Made with ❤️ by <a href="https://www.digivats.com">DIGIVATS</a>
       </Digivats>
