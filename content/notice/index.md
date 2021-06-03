@@ -2,5 +2,5 @@
 name: notice
 ---
 
-Book Residential Plots in WTC Faridabad & avail Special Inaugural Discounts. this is cool dude
+Book Residential Plots in WTC Faridabad & avail Special Inaugural Discounts.
 CALL NOW!
