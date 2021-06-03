@@ -72,7 +72,7 @@ const FooterLinks = styled.div`
 
 const Disclaimer = styled.p`
   color: rgb(256, 256, 256, 0.7);
-  margin: 10px auto;
+  margin: 0 auto 10px auto;
   max-width: 1100px;
 `;
 

@@ -43,7 +43,7 @@ collections:
         }
   - name: "notice"
     label: "Notice"
-    description: "Notice which will appear at the top of website"
+    description: "Notice which will appear at the top of website like discounts."
     media_folder: ""
     public_folder: ""
     path: "{{name}}/index"
@@ -51,4 +51,4 @@ collections:
     create: false
     delete: false
     fields:
-      - { name: "notice", label: "Notice", widget: "string", default: "" }
+      - { name: "notice", label: "Notice", widget: "markdown", default: "" }

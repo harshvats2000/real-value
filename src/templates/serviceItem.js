@@ -19,19 +19,19 @@ const Content = styled.section`
   background: #f1f1f1;
 `;
 
-const Page = (props) => {
-  const { slug } = props.pageContext;
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(filter: { frontmatter: { name: { ne: "notice" } } }) {
-        edges {
-          node {
+export const query = graphql`
+  query Item($id: String) {
+    allFile(filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" }, id: { eq: $id } }) {
+      edges {
+        node {
+          id
+          extension
+          childMarkdownRemark {
             html
             frontmatter {
-              slug
               name
               category
-              description
+              slug
               image {
                 childImageSharp {
                   gatsbyImageData(placeholder: BLURRED)
@@ -50,11 +50,15 @@ const Page = (props) => {
         }
       }
     }
-  `).allMarkdownRemark.edges.filter((edge) => edge.node.frontmatter.slug === slug)[0];
+  }
+`;
+
+const Page = (props) => {
+  const data = useStaticQuery(query).allFile.edges[0].node.childMarkdownRemark;
   const {
     frontmatter: { image, name, category, description, plan },
     html
-  } = data.node;
+  } = data;
 
   return (
     <>

@@ -1,17 +1,14 @@
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
-    query {
-      allMarkdownRemark(filter: { frontmatter: { name: { ne: "notice" } } }) {
+    {
+      allFile(filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" } }) {
         edges {
           node {
-            frontmatter {
-              category
-              slug
-              name
-              image {
-                childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED)
-                }
+            id
+            childMarkdownRemark {
+              frontmatter {
+                category
+                slug
               }
             }
           }
@@ -20,12 +17,13 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `);
 
-  data.allMarkdownRemark.edges.forEach((edge) => {
-    const { slug, category } = edge.node.frontmatter;
+  data.allFile.edges.forEach((edge) => {
+    const { slug, category } = edge.node.childMarkdownRemark.frontmatter;
+    const id = edge.node.id;
     actions.createPage({
       path: `${category}/${slug}`,
       component: require.resolve("./src/templates/serviceItem.js"),
-      context: { slug }
+      context: { id }
     });
   });
 };
