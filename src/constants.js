@@ -1,5 +1,5 @@
 export const CONTACT_NUMBER = 9811154523;
-export const CONTACT_EMAIL = "realvalueproperties123@gmail.com";
+export const CONTACT_EMAIL = "nitingarg2807@gmail.com";
 
 export const LINKS = [
   {

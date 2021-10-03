@@ -16,6 +16,7 @@ const List = styled.ul`
   margin: auto;
   display: flex;
   overflow-x: scroll;
+  justify-content: center;
   @media (min-width: 750px) {
     max-width: 820px;
     margin: auto;
@@ -41,31 +42,9 @@ const Number = styled.p`
 const Team = () => {
   return (
     <Section>
-      <SectionHeading id="team">Team Behind Real Value Properties</SectionHeading>
+      <SectionHeading id="team">Person Behind Real Value Properties</SectionHeading>
 
       <List>
-        <ListItem>
-          <ImageWrapper>
-            <StaticImage src="../images/kakkar.jpeg" alt="girish kakkar" placeholder="blurred" layout="fixed" width={250} height={250} />
-          </ImageWrapper>
-
-          <Body>
-            <Name>Girish Kakkar</Name>
-            <Number>9810445809</Number>
-          </Body>
-        </ListItem>
-
-        <ListItem>
-          <ImageWrapper>
-            <StaticImage src="../images/vishal.jpeg" alt="vishal bharadwaj" placeholder="blurred" layout="fixed" width={250} height={250} />
-          </ImageWrapper>
-
-          <Body>
-            <Name>Vishal Vashistha</Name>
-            <Number>9654324427</Number>
-          </Body>
-        </ListItem>
-
         <ListItem>
           <ImageWrapper>
             <StaticImage src="../images/nitin.jpeg" alt="Nitin Garg" placeholder="blurred" layout="fixed" width={250} height={250} />
