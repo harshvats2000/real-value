@@ -3,6 +3,49 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { LINKS } from "../constants";
 
+const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  useEffect(() => {
+    const el = document.querySelector("#header-nav-mobile");
+    el.style.display = "flex";
+    el.style.height = openMenu ? "136px" : "0";
+  }, [openMenu]);
+
+  return (
+    <>
+      <Container>
+        <Wrapper>
+          <Logo>
+            <Link to="/">Real Value</Link>
+          </Logo>
+          <MenuIcon onClick={() => setOpenMenu(!openMenu)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </MenuIcon>
+          <Nav>
+            {LINKS.map((link, i) => (
+              <NavItem key={i}>
+                <Link to={`/${link.url}`}>{link.label}</Link>
+              </NavItem>
+            ))}
+          </Nav>
+        </Wrapper>
+        <MobileNav id="header-nav-mobile">
+          {LINKS.map((link, i) => (
+            <NavItem key={i}>
+              <Link to={`${link.url}`}>{link.label}</Link>
+            </NavItem>
+          ))}
+        </MobileNav>
+      </Container>
+    </>
+  );
+};
+
+export default Header;
+
 const Container = styled.header``;
 
 const Wrapper = styled.div`
@@ -89,46 +132,3 @@ const MenuIcon = styled.div`
     border-radius: 15px;
   }
 `;
-
-const Header = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  useEffect(() => {
-    const el = document.querySelector("#header-nav-mobile");
-    el.style.display = "flex";
-    el.style.height = openMenu ? "136px" : "0";
-  }, [openMenu]);
-
-  return (
-    <>
-      <Container>
-        <Wrapper>
-          <Logo>
-            <Link to="/">Real Value</Link>
-          </Logo>
-          <MenuIcon onClick={() => setOpenMenu(!openMenu)}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </MenuIcon>
-          <Nav>
-            {LINKS.map((link, i) => (
-              <NavItem key={i}>
-                <Link to={`/${link.url}`}>{link.label}</Link>
-              </NavItem>
-            ))}
-          </Nav>
-        </Wrapper>
-        <MobileNav id="header-nav-mobile">
-          {LINKS.map((link, i) => (
-            <NavItem key={i}>
-              <Link to={`${link.url}`}>{link.label}</Link>
-            </NavItem>
-          ))}
-        </MobileNav>
-      </Container>
-    </>
-  );
-};
-
-export default Header;

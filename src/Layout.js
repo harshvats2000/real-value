@@ -3,7 +3,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "@fontsource/open-sans"; // Defaults to weight 400 with all styles included.
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Notice from "./components/notice";
+// import Notice from "./components/notice";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
     <React.Fragment>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Notice />
+        {/* <Notice /> */}
         {children}
       </ThemeProvider>
     </React.Fragment>
