@@ -5,10 +5,11 @@ description: Godrej Properties is a reputed real estate developer in India that
   projects. The developer develops great excellence of homes for luxury seekers
   with stylish amenities
 image: godrej-retreat-banner.jpg
-slug: https://real-value.in/godrej-plots-faridabad
+slug: godrej-plots-faridabad
 category: builder-floors
 plan: []
 ---
+
 <!--StartFragment-->
 
 Godrej Properties is a reputed real estate developer in India that is involved in construction work of residential, commercial, and township projects. The developer develops great excellence of homes for luxury seekers with stylish amenities. Many Indian property and home seekers trust this builder for quality, cost, and safe homes. At present, the developer is working on its new project i.e. Godrej Retreat Plots Sector 83 Faridabad.\
