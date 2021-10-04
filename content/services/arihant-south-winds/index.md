@@ -5,7 +5,7 @@ description: "The concept evolves by conscious amalgamation of contemporary and
   as well as inside the building premises by providing uninterrupted landscape
   green podium at first floor level. "
 image: arihant-south-winds-banner.jpg
-slug: arihant south winds
+slug: arihantsouthwinds
 category: flats
 plan:
   - name: 3 BHK
