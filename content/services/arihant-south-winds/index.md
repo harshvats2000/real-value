@@ -7,7 +7,11 @@ description: "The concept evolves by conscious amalgamation of contemporary and
 image: arihant-south-winds-banner.jpg
 slug: arihant south winds
 category: flats
-plan: []
+plan:
+  - name: 3 BHK
+    img: arihant-south-winds-floor-plan-1.jpg
+  - name: 4 BHK
+    img: arihant-south-winds-floor-plan-2.jpg
 ---
 <!--StartFragment-->
 
