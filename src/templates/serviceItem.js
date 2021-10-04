@@ -5,60 +5,17 @@ import Contact from "../components/contact";
 import Layout from "../Layout";
 import { Helmet } from "react-helmet";
 import Banner from "../components/banner";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import styled from "styled-components";
 
-const Content = styled.section`
-  padding: 10px;
-  line-height: 30px;
-  max-width: 800px;
-  margin: auto;
-  background: #f1f1f1;
-`;
-
-export const query = graphql`
-  query Item($id: String) {
-    allFile(filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" }, id: { eq: $id } }) {
-      edges {
-        node {
-          id
-          extension
-          childMarkdownRemark {
-            html
-            frontmatter {
-              name
-              category
-              slug
-              image {
-                childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED)
-                }
-              }
-              plan {
-                name
-                img {
-                  childImageSharp {
-                    gatsbyImageData(placeholder: BLURRED, width: 200, height: 200)
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 const Page = (props) => {
-  const data = useStaticQuery(query).allFile.edges[0].node.childMarkdownRemark;
   const {
     frontmatter: { image, name, category, description, plan },
     html
-  } = data;
+  } = props.data.allFile.edges[0].node.childMarkdownRemark;
 
   return (
     <>
@@ -108,3 +65,45 @@ const Page = (props) => {
 };
 
 export default Page;
+
+const Content = styled.section`
+  padding: 10px;
+  line-height: 30px;
+  max-width: 800px;
+  margin: auto;
+  background: #f1f1f1;
+`;
+
+export const query = graphql`
+  query Item($id: String) {
+    allFile(filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" }, id: { eq: $id } }) {
+      edges {
+        node {
+          id
+          extension
+          childMarkdownRemark {
+            html
+            frontmatter {
+              name
+              category
+              slug
+              image {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+              }
+              plan {
+                name
+                img {
+                  childImageSharp {
+                    gatsbyImageData(placeholder: BLURRED, width: 200, height: 200)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

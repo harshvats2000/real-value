@@ -19,11 +19,10 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data.allFile.edges.forEach((edge) => {
     const { slug, category } = edge.node.childMarkdownRemark.frontmatter;
-    const id = edge.node.id;
     actions.createPage({
       path: `${category}/${slug}`,
       component: require.resolve("./src/templates/serviceItem.js"),
-      context: { id }
+      context: { id: edge.node.id }
     });
   });
 };
