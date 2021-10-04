@@ -7,7 +7,6 @@ import Notice from "./components/notice";
 
 const GlobalStyle = createGlobalStyle`
   * {
-    scroll-behavior: smooth;
     box-sizing: border-box;
   }
   body {
