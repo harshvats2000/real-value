@@ -9,7 +9,6 @@ slug: godrej-plots-faridabad
 category: builder-floors
 plan: []
 ---
-
 <!--StartFragment-->
 
 Godrej Properties is a reputed real estate developer in India that is involved in construction work of residential, commercial, and township projects. The developer develops great excellence of homes for luxury seekers with stylish amenities. Many Indian property and home seekers trust this builder for quality, cost, and safe homes. At present, the developer is working on its new project i.e. Godrej Retreat Plots Sector 83 Faridabad.\
@@ -25,3 +24,21 @@ These modish homes will have ample space to move in and out of the rooms with ea
 Godrej Plots Faridabad will be offered with high-quality fixtures with impressive flooring that will intensify the appearance of these homes. Now, you will not hesitate while inviting your friends or relatives to your sweet home. These comfortable, trusted, secured and luxury living area will make your life easier and full of happiness where you would love to spend more and more time with your family.
 
 <!--EndFragment-->
+
+
+
+<!--Start of Tawk.to Script-->
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61612b4a86aee40a5735af19/1fhhp27id';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+<!--End of Tawk.to Script-->
