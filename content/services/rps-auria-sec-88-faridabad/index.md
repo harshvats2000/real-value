@@ -11,6 +11,8 @@ plan:
     img: ap-bg2.jpg
   - name: 3 BHK
     img: ap-bg3.jpg
+  - name: 5 BHK
+    img: auria-brochure-3-5-bhk-update-17.png
 ---
 <!--StartFragment-->
 
