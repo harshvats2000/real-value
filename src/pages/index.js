@@ -8,7 +8,7 @@ import Team from "../components/team";
 import Contact from "../components/contact";
 import Reviews from "../components/reviews";
 import Layout from "../Layout";
-import Banner from "../components/banner";
+import HomeBanner from "../components/homeBanner";
 import About from "../components/about";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -16,16 +16,36 @@ const Main = styled.main``;
 
 // markup
 const Home = () => {
-  const data = useStaticQuery(graphql`
+  console.log(1);
+  const { img1, img2, img3, img4, img5 } = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "bg-home.jpeg" }) {
+      img1: file(relativePath: { eq: "banner-1.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
+      img2: file(relativePath: { eq: "banner-2.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
+      img3: file(relativePath: { eq: "banner-3.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
+      img4: file(relativePath: { eq: "banner-4.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
+      img5: file(relativePath: { eq: "banner-5.jpeg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
     }
   `);
-  const img = data.file;
 
   return (
     <Layout>
@@ -38,12 +58,7 @@ const Home = () => {
       </Helmet>
       <Header />
       <Main>
-        <Banner
-          img={img}
-          alt="real value home interior"
-          title="Dream Homes in Faridabad"
-          desc="Buy best property: Builder Floors | Flats | Villas | Plots/SCO's in Faridabad."
-        />
+        <HomeBanner images={[img1, img2, img3, img4, img5]} />
         <Contact />
         <Services />
         <Reviews />
